@@ -1,134 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <img src="tricia.jpg" alt="Example" class="fit-image">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media Landing Page</title>
-    <style>
-        .fit-image {
-        width: 300px;
-        height: 200px;
-        margin: 50px auto;
-        object-fit: cover; /* Options: contain, fill, cover, scale-down */
-        border-radius: 10px; /* Optional: rounded corners */
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom right, #4e54c8, #8f94fb);
-            color: #fff;
-            text-align: center;
-            overflow-x: hidden;
-            
-        }
-        .container {
-    
-    
-            
-            max-width: 700px;
-            margin: 50px auto;
-            padding: 40px;
-            background: rgb(251,164,63);
-            background: linear-gradient(90deg, rgba(251,164,63,1) 0%, rgba(201,70,252,1) 100%);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(10px);
-            animation: fadeIn 1.5s ease-in-out;
-       
-            
-            
-            
-            
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Social Media Landing Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-        }
-        h1 {
-            font-size: 3em;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 1.3em;
-            margin-bottom: 30px;
-            color: #e0e0e0;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-        .social-links a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            color: white;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: linear-gradient(to bottom right, #4e54c8, #8f94fb);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-            font-size: 30px;
-            transition: all 0.4s ease;
-            position: relative;
-        }
-        .social-links a::before {
-            content: '';
-            position: absolute;
-            top: -8px;
-            left: -8px;
-            right: -8px;
-            bottom: -8px;
-            background: linear-gradient(to bottom right, #ff7eb3, #ff758c);
-            border-radius: 50%;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-        .social-links a:hover::before {
-            opacity: 1;
-        }
-        .social-links a:hover {
-            transform: translateY(-10px) rotate(5deg);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .fit-image {
+      width: 90%;
+      max-width: 1000px;
+      height: auto;
+      margin: 30px auto;
+      object-fit: cover;
+      border-radius: 20px;
+      display: block;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      aspect-ratio: 16/9;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 30px auto;
+      padding: 50px 30px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3em;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.3em;
+      margin-bottom: 30px;
+      color: #f2f2f2;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .social-links a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: linear-gradient(to bottom right, #4e54c8, #8f94fb);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+      font-size: 30px;
+      transition: transform 0.4s ease;
+      position: relative;
+      animation: bounce 2s infinite;
+    }
+
+    .social-links a::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      right: -8px;
+      bottom: -8px;
+      background: linear-gradient(to bottom right, #ff7eb3, #ff758c);
+      border-radius: 50%;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .social-links a:hover::before {
+      opacity: 1;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .drive-icon img {
+      width: 36px;
+      height: 36px;
+    }
+
+    /* Robot greeting animation */
+    .robot-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .robot-text {
+      font-size: 1.2em;
+      margin-right: 15px;
+      animation: wave 2s infinite;
+    }
+
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(10deg); }
+      50% { transform: rotate(-10deg); }
+      75% { transform: rotate(10deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Stay Connected</h1>
-        <p>Follow us on social media to stay updated with the latest trends and updates!</p>
-        <div class="social-links">
-            <a href="https://www.facebook.com/HelloTricia" target="_blank" class="facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://x.com/cthpat" target="_blank" class="twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/cthpat?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/mico-arevalo-27775b318/" target="_blank" class="linkedin">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://www.youtube.com/@micoarevalo5072" target="_blank" class="youtube">
-                <i class="fab fa-youtube"></i>
-            </a>
-        </div>
+
+  <!-- Landscape Eye-Level Photo -->
+  <img src="tricia.jpg" alt="Example" class="fit-image"/>
+
+  <!-- Robot Greeting Section -->
+  <div class="robot-container">
+    <div class="robot-text">👋 Hi there!</div>
+    <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_fcfjwiyb.json"  background="transparent"  speed="1"  style="width: 80px; height: 80px;"  loop  autoplay></lottie-player>
+  </div>
+
+  <!-- Frosted Glass Container -->
+  <div class="container">
+    <h1>Stay Connected</h1>
+    <p>Follow us on social media to stay updated with the latest trends and updates!</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/HelloTricia" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://x.com/cthpat" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/cthpat" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/mico-arevalo-27775b318/" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://drive.google.com/drive/folders/1-95Tp_lmAyC9WuGeNYMbhktCpuuXzFLz?usp=sharing" target="_blank" class="drive-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png" alt="Google Drive" />
+      </a>
     </div>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </div>
+
 </body>
 </html>
