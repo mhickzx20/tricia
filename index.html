@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff5f8">
+<meta name="description" content="Professional profile of Patricia Mae Rodrin, Relationship Manager Secretary.">
+<title>Patricia Mae Rodrin — Professional Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff6f9;--bg2:#fde8f0;--card:#fffdfd;--ink:#472033;--muted:#8a6577;
+  --blush:#f9d3e2;--rose:#ee8fb3;--pink:#d9588d;--deep:#b53a6e;--wine:#4a1f35;--gold:#d8b490;
+  --line:rgba(181,58,110,.15);--shadow:0 24px 70px rgba(181,58,110,.16);--max:1160px;
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --ease:cubic-bezier(.2,.75,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit;color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--deep);outline-offset:3px}
+::selection{background:var(--blush);color:var(--wine)}
+h1,h2,h3,p{margin-top:0}
+main{overflow:hidden}
+
+/* intro, progress, cursor glow */
+.intro{position:fixed;inset:0;z-index:200;background:var(--bg);display:grid;place-items:center;animation:introOut .9s var(--ease) 1.25s forwards}
+.intro span{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:1.7rem;color:#fff;background:linear-gradient(135deg,var(--rose),var(--deep));animation:introPop 1.2s var(--ease) both}
+@keyframes introPop{0%{transform:scale(.4);opacity:0}40%{transform:scale(1);opacity:1}100%{transform:scale(1.08);opacity:1}}
+@keyframes introOut{to{opacity:0;visibility:hidden;transform:scale(1.04)}}
+.progress{position:fixed;z-index:120;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--rose),var(--deep));transform-origin:left;transform:scaleX(0)}
+.glow{position:fixed;z-index:1;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;background:radial-gradient(circle,rgba(238,143,179,.22),transparent 65%);pointer-events:none;left:0;top:0;opacity:0;transition:opacity .4s}
+.glow.on{opacity:1}
+main,footer{position:relative;z-index:2}
+
+/* nav */
+.nav-wrap{position:fixed;z-index:100;top:14px;left:0;right:0;padding:0 20px;transition:transform .5s var(--ease)}
+.nav-wrap.hide{transform:translateY(-120%)}
+nav{max-width:var(--max);margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 18px;background:rgba(255,253,253,.78);border:1px solid rgba(255,255,255,.9);border-radius:999px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 8px 30px rgba(181,58,110,.1)}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:1.12rem;font-weight:500}
+.monogram{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--rose),var(--deep));color:#fff;font-family:var(--serif);font-size:.9rem;transition:transform .6s var(--ease)}
+.brand:hover .monogram{transform:rotate(360deg)}
+.nav-links{display:flex;align-items:center;gap:6px;font-size:.88rem;font-weight:500;color:var(--muted)}
+.nav-links a:not(.nav-contact){position:relative;padding:8px 14px;border-radius:999px;transition:color .25s,background .25s}
+.nav-links a:not(.nav-contact):hover{color:var(--deep)}
+.nav-links a.active:not(.nav-contact){background:var(--bg2);color:var(--deep)}
+.nav-contact{margin-left:6px;padding:10px 20px;border-radius:999px;background:var(--wine);color:#fff!important;transition:transform .3s var(--ease),background .3s}
+.nav-contact:hover{background:var(--deep);transform:translateY(-2px)}
+.menu-toggle{display:none;border:0;background:transparent;font-size:1.4rem;cursor:pointer}
+
+/* hero */
+.hero{min-height:100svh;display:grid;align-items:center;padding:140px 24px 90px;position:relative;background:radial-gradient(55% 50% at 88% 12%,rgba(249,211,226,.9),transparent 70%),radial-gradient(45% 45% at 4% 96%,rgba(253,232,240,1),transparent 70%)}
+.orb{position:absolute;border-radius:50%;filter:blur(2px);pointer-events:none;animation:float 9s ease-in-out infinite;transform:translate(var(--px,0),var(--py,0))}
+.orb.o1{width:150px;height:150px;left:6%;top:22%;background:radial-gradient(circle at 30% 30%,#fff,var(--blush) 55%,transparent 72%);opacity:.9}
+.orb.o2{width:70px;height:70px;left:46%;bottom:12%;background:radial-gradient(circle at 30% 30%,#fff,var(--rose) 65%,transparent 75%);opacity:.6;animation-delay:-3s}
+.orb.o3{width:110px;height:110px;right:5%;bottom:8%;background:radial-gradient(circle at 30% 30%,#fff,var(--gold) 70%,transparent 78%);opacity:.35;animation-delay:-6s}
+@keyframes float{0%,100%{margin-top:0}50%{margin-top:-22px}}
+.hero-inner{width:100%;max-width:var(--max);margin:auto;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:70px;position:relative}
+.tag{display:inline-flex;align-items:center;gap:9px;padding:8px 16px;border-radius:999px;background:rgba(255,253,253,.8);border:1px solid var(--line);font-size:.82rem;font-weight:600;color:var(--deep)}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--pink);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(217,88,141,.5)}70%,100%{box-shadow:0 0 0 10px rgba(217,88,141,0)}}
+h1{font-family:var(--serif);font-weight:500;letter-spacing:-.025em;line-height:1;font-size:clamp(3.4rem,7vw,6.6rem);margin:26px 0;color:var(--wine)}
+h1 .line{display:block;overflow:hidden;padding-bottom:.08em}
+h1 .line:last-child{font-style:italic;font-weight:400;color:var(--deep)}
+h1 .ch{display:inline-block;transform:translateY(110%);animation:chUp .9s var(--ease) forwards;animation-delay:calc(1.3s + var(--i)*45ms)}
+@keyframes chUp{to{transform:none}}
+.hero-copy{max-width:520px;font-size:1.08rem;color:var(--muted);line-height:1.85}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 26px;border-radius:999px;font-weight:600;font-size:.92rem;border:1px solid transparent;cursor:pointer;position:relative;overflow:hidden;transition:transform .25s var(--ease),box-shadow .3s}
+.btn:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%)}
+.btn:hover:after{transform:translateX(120%);transition:transform .8s var(--ease)}
+.btn-primary{background:linear-gradient(135deg,var(--rose),var(--deep));color:#fff;box-shadow:0 12px 28px rgba(181,58,110,.32)}
+.btn-primary:hover{box-shadow:0 16px 36px rgba(181,58,110,.42)}
+.btn-secondary{background:rgba(255,253,253,.75);border-color:var(--line);color:var(--wine)}
+.btn:active{transform:scale(.97)!important}
+.hero-note{font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--deep);margin:28px 0 0}
+.portrait-stage{position:relative;max-width:440px;width:100%;justify-self:end;perspective:1000px}
+.tilt{transform-style:preserve-3d;transition:transform .5s var(--ease);will-change:transform}
+.portrait-stage:before{content:"";position:absolute;inset:-22px -22px 22px 22px;border-radius:230px 230px 40px 40px;border:1.5px solid var(--rose);opacity:.6;animation:ring 6s ease-in-out infinite}
+@keyframes ring{50%{inset:-14px -14px 14px 14px;opacity:.9}}
+.portrait-frame{aspect-ratio:4/5;border-radius:220px 220px 36px 36px;background:linear-gradient(160deg,var(--blush),var(--rose));padding:12px;position:relative;box-shadow:var(--shadow);overflow:hidden}
+.portrait-img{width:100%;height:100%;display:block;object-fit:cover;object-position:center top;border-radius:210px 210px 26px 26px;background:var(--blush);transition:transform 1.2s var(--ease)}
+.portrait-frame:hover .portrait-img{transform:scale(1.05)}
+.floating-card{position:absolute;left:-46px;bottom:56px;background:rgba(255,253,253,.92);border:1px solid #fff;border-radius:22px;padding:16px 20px;box-shadow:0 16px 44px rgba(181,58,110,.22);width:220px;animation:float 7s ease-in-out infinite}
+.floating-card small{display:block;font-size:.74rem;color:var(--deep);font-weight:600}
+.floating-card strong{display:block;font-family:var(--serif);font-weight:500;font-size:1.3rem;line-height:1.25;margin-top:3px;color:var(--wine);transition:opacity .45s,transform .45s}
+.floating-card strong.swap{opacity:0;transform:translateY(8px)}
+.sparkle{position:absolute;color:var(--rose);font-size:1.6rem;line-height:1;animation:twinkle 3s ease-in-out infinite}
+.sparkle.s1{top:-8px;right:-14px}.sparkle.s2{top:42%;right:-34px;font-size:1rem;color:var(--gold);animation-delay:-1.4s}
+@keyframes twinkle{50%{transform:scale(.55) rotate(45deg);opacity:.5}}
+.scroll-cue{position:absolute;left:50%;bottom:26px;width:24px;height:40px;border:1.5px solid var(--rose);border-radius:14px;transform:translateX(-50%)}
+.scroll-cue:after{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--deep);animation:cue 1.8s infinite}
+@keyframes cue{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(14px)}}
+
+/* sections */
+.section{padding:110px 24px}
+.section-inner{max-width:var(--max);margin:auto}
+.section-heading{max-width:640px;margin-bottom:50px}
+.kicker{font-size:.85rem;font-weight:600;color:var(--deep)}
+h2{font-family:var(--serif);font-weight:500;letter-spacing:-.02em;font-size:clamp(2.5rem,4.8vw,4.2rem);line-height:1.08;margin:14px 0 18px;color:var(--wine)}
+h2 em{font-weight:400;color:var(--deep)}
+.section-intro{color:var(--muted);font-size:1.04rem;max-width:620px;line-height:1.85}
+.about{background:var(--card)}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:84px;align-items:start}
+.about-aside{padding:34px 30px;border-radius:200px 200px 32px 32px;background:linear-gradient(170deg,var(--bg2),var(--blush));text-align:center}
+.aside-mark{font-family:var(--serif);font-size:4.4rem;line-height:.9;color:var(--deep);margin-top:22px}
+.about-aside p{font-family:var(--serif);font-style:italic;font-size:1.32rem;line-height:1.5;color:var(--wine);margin:8px 0 18px}
+.about-text p{font-size:1.04rem;color:var(--muted);line-height:1.95}
+.about-text p.lead{font-family:var(--serif);font-size:1.7rem;color:var(--ink);line-height:1.5}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.value-card{position:relative;overflow:hidden;padding:30px 26px;border:1px solid var(--line);border-radius:30px;background:var(--card);min-height:220px;transition:transform .4s var(--ease),box-shadow .4s,border-color .4s}
+.value-card:before{content:"";position:absolute;inset:0;background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),rgba(238,143,179,.25),transparent 70%);opacity:0;transition:opacity .35s}
+.value-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(217,88,141,.4)}
+.value-card:hover:before{opacity:1}
+.value-card>*{position:relative}
+.value-icon{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--blush),var(--rose));color:var(--deep);font-size:1.1rem;margin-bottom:22px;transition:transform .5s var(--ease)}
+.value-card:hover .value-icon{transform:rotate(-12deg) scale(1.12)}
+.value-card h3{font-family:var(--serif);font-size:1.4rem;font-weight:600;margin-bottom:8px;color:var(--wine)}
+.value-card p{font-size:.92rem;color:var(--muted);margin:0;line-height:1.75}
+.experience{background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.experience-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}
+.experience-label{position:sticky;top:110px;align-self:start}
+.acc{display:grid;gap:14px}
+.acc-item{border-radius:28px;background:var(--card);border:1px solid var(--line);transition:box-shadow .4s,border-color .4s}
+.acc-item.open{box-shadow:var(--shadow);border-color:rgba(217,88,141,.4)}
+.acc-head{width:100%;display:grid;grid-template-columns:46px 1fr 30px;align-items:center;gap:18px;padding:20px 24px;border:0;background:none;text-align:left;cursor:pointer;border-radius:28px}
+.step-number{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--blush);color:var(--deep);font-family:var(--serif);font-size:1.15rem;transition:background .4s,color .4s,transform .4s var(--ease)}
+.acc-item.open .step-number{background:linear-gradient(135deg,var(--rose),var(--deep));color:#fff;transform:scale(1.08)}
+.acc-head h3{font-family:var(--serif);font-size:1.45rem;font-weight:600;margin:0;color:var(--wine)}
+.plus{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);position:relative;transition:transform .45s var(--ease),background .3s}
+.plus:before,.plus:after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;background:var(--deep);transform:translate(-50%,-50%)}
+.plus:after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .45s var(--ease)}
+.acc-item.open .plus{background:var(--blush);transform:rotate(180deg)}
+.acc-item.open .plus:after{transform:translate(-50%,-50%) rotate(0)}
+.acc-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease)}
+.acc-item.open .acc-body{grid-template-rows:1fr}
+.acc-body>div{overflow:hidden}
+.acc-body p{margin:0;padding:0 24px 24px 88px;font-size:.96rem;color:var(--muted);line-height:1.8}
+.note{margin:8px 6px 0;font-size:.8rem;color:var(--muted)}
+.contact{padding:100px 24px 55px}
+.contact-panel{max-width:var(--max);margin:auto;background:linear-gradient(135deg,#4a1f35,#9c2f62);color:#fff;border-radius:44px;padding:clamp(34px,6vw,76px);position:relative;overflow:hidden}
+.contact-panel:after{content:"";position:absolute;width:460px;height:460px;border-radius:50%;right:-110px;bottom:-260px;background:radial-gradient(circle,rgba(238,143,179,.55),transparent 70%);animation:float 8s ease-in-out infinite}
+.contact .kicker{color:var(--blush)}
+.contact h2{color:#fff;max-width:700px}
+.contact-copy{max-width:580px;color:#f0cfde;line-height:1.85}
+.contact-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;position:relative;z-index:1}
+.contact .btn-primary{background:#fff;color:var(--wine);box-shadow:none}
+.contact .btn-secondary{color:#fff;border-color:rgba(255,255,255,.35);background:transparent}
+footer{max-width:var(--max);margin:0 auto;padding:22px 24px 34px;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:.82rem}
+.toast{position:fixed;z-index:150;left:50%;bottom:28px;transform:translate(-50%,30px);opacity:0;padding:12px 22px;border-radius:999px;background:var(--wine);color:#fff;font-size:.88rem;box-shadow:var(--shadow);transition:opacity .4s,transform .5s var(--ease);pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.to-top{position:fixed;z-index:90;right:20px;bottom:20px;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(255,253,253,.9);color:var(--deep);font-size:1.1rem;cursor:pointer;box-shadow:0 8px 24px rgba(181,58,110,.18);opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .4s,transform .5s var(--ease),background .3s}
+.to-top.show{opacity:1;transform:none;pointer-events:auto}
+.to-top:hover{background:var(--blush)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0ms)}
+.reveal.visible{opacity:1;transform:none}
+.reveal.visible.value-card,.reveal.visible.acc-item{transition:opacity .9s var(--ease) var(--d,0ms),transform .4s var(--ease),box-shadow .4s,border-color .4s}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}h1 .ch{transform:none}.intro{display:none}}
+@media(max-width:850px){
+ .hero-inner{grid-template-columns:1fr .8fr;gap:36px}.floating-card{left:-20px}
+ .about-grid,.experience-grid{grid-template-columns:1fr;gap:36px}.experience-label{position:static}
+ .values-grid{grid-template-columns:repeat(2,1fr)}.nav-links a:not(.nav-contact){padding:8px 9px}
+}
+@media(max-width:640px){
+ .nav-wrap{top:8px;padding:0 10px}.brand{font-size:1rem}
+ .menu-toggle{display:block}.nav-links{display:none;position:absolute;top:62px;left:10px;right:10px;flex-direction:column;align-items:stretch;gap:0;padding:10px;background:rgba(255,253,253,.97);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow)}
+ .nav-links.open{display:flex}.nav-links a:not(.nav-contact){padding:13px 14px}.nav-contact{text-align:center;margin:4px 0 0}
+ .hero{padding:122px 22px 70px}.hero-inner{grid-template-columns:1fr;gap:50px}h1{font-size:clamp(3.4rem,16vw,5.4rem)}
+ .portrait-stage{width:84%;justify-self:center}.floating-card{left:-18px;bottom:34px;padding:13px 15px;width:190px}.sparkle.s2{right:-20px}.scroll-cue{display:none}
+ .section{padding:78px 22px}.values-grid{grid-template-columns:1fr}.value-card{min-height:0}
+ .acc-head{grid-template-columns:40px 1fr 28px;gap:12px;padding:16px}.step-number{width:40px;height:40px}.acc-head h3{font-size:1.2rem}.acc-body p{padding:0 18px 20px 18px}
+ .contact{padding:70px 14px 32px}.contact-panel{border-radius:32px;padding:34px 24px}.contact-actions .btn{width:100%}
+ footer{flex-direction:column;gap:6px;padding:20px 22px 28px}
+}
+</style>
+</head>
+<body>
+<div class="intro" aria-hidden="true"><span>PR</span></div>
+<div class="progress" id="progress"></div>
+<div class="glow" id="glow" aria-hidden="true"></div>
+
+<div class="nav-wrap" id="navWrap">
+  <nav aria-label="Main navigation">
+    <a class="brand" href="#home" aria-label="Patricia Mae Rodrin, back to top"><span class="monogram">PR</span><span>Patricia Mae Rodrin</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a><a href="#strengths">Strengths</a><a href="#approach">Approach</a><a class="nav-contact" href="#contact">Get in touch</a>
+    </div>
+  </nav>
+</div>
+
+<main>
+  <section class="hero" id="home">
+    <span class="orb o1" data-depth="18"></span><span class="orb o2" data-depth="-24"></span><span class="orb o3" data-depth="30"></span>
+    <div class="hero-inner">
+      <div class="reveal">
+        <span class="tag"><i></i>Relationship Manager Secretary</span>
+        <h1 aria-label="Patricia Mae Rodrin"><span class="line" data-split>Patricia Mae</span><span class="line" data-split>Rodrin</span></h1>
+        <p class="hero-copy">Thoughtful coordination, clear communication, and dependable administrative support in a banking environment.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#about">Discover my profile</a><a class="btn btn-secondary" href="#contact">Contact details</a></div>
+        <p class="hero-note">Professionalism in every detail. Care in every connection.</p>
+      </div>
+      <div class="portrait-stage reveal" style="--d:150ms">
+        <div class="tilt" id="tilt">
+          <div class="portrait-frame">
+            <!-- Put your photo at images/patricia-portrait.jpg (same folder as this file) -->
+            <img class="portrait-img" src="images/patricia-portrait.jpg" alt="Portrait of Patricia Mae Rodrin">
+          </div>
+          <span class="sparkle s1" aria-hidden="true">✦</span><span class="sparkle s2" aria-hidden="true">✦</span>
+          <div class="floating-card"><small>Professional focus</small><strong id="rotator">Organized.</strong></div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"></div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="section-inner about-grid">
+      <aside class="about-aside reveal"><div class="aside-mark">“</div><p>Building trust through preparation, professionalism, and the details that help every day run smoothly.</p></aside>
+      <div class="about-text">
+        <div class="kicker reveal">About me</div>
+        <h2 class="reveal" style="--d:80ms">Reliable support, <em>meaningful connections.</em></h2>
+        <p class="lead reveal" style="--d:160ms">I bring a service-minded and detail-oriented approach to supporting relationship management in banking.</p>
+        <p class="reveal" style="--d:240ms">My role calls for thoughtful coordination, accurate documentation, effective communication, and respect for confidential information. I value being prepared, anticipating needs, and helping colleagues and clients experience a smooth, professional process.</p>
+        <p class="reveal" style="--d:320ms">This profile is designed to reflect my professional approach and the standards I aim to bring to every interaction.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="strengths">
+    <div class="section-inner">
+      <div class="section-heading reveal"><div class="kicker">Professional strengths</div><h2>Quiet precision, <em>consistent care.</em></h2><p class="section-intro">The capabilities that help create a dependable, polished experience for colleagues, relationship managers, and clients.</p></div>
+      <div class="values-grid">
+        <article class="value-card reveal" style="--d:0ms"><div class="value-icon" aria-hidden="true">✦</div><h3>Coordination &amp; scheduling</h3><p>Helping manage calendars, meetings, appointments, and follow-ups with care and attention to timing.</p></article>
+        <article class="value-card reveal" style="--d:90ms"><div class="value-icon" aria-hidden="true">❀</div><h3>Communication</h3><p>Maintaining courteous, clear, and professional communication across daily interactions.</p></article>
+        <article class="value-card reveal" style="--d:180ms"><div class="value-icon" aria-hidden="true">▤</div><h3>Documentation</h3><p>Supporting organized records, document preparation, and careful attention to administrative details.</p></article>
+        <article class="value-card reveal" style="--d:0ms"><div class="value-icon" aria-hidden="true">◇</div><h3>Confidentiality</h3><p>Approaching sensitive information with discretion and respect for workplace procedures.</p></article>
+        <article class="value-card reveal" style="--d:90ms"><div class="value-icon" aria-hidden="true">♡</div><h3>Client service</h3><p>Contributing to a welcoming, responsive, and professional client experience.</p></article>
+        <article class="value-card reveal" style="--d:180ms"><div class="value-icon" aria-hidden="true">✿</div><h3>Adaptability</h3><p>Staying organized and solution-focused as priorities and daily needs change.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section experience" id="approach">
+    <div class="section-inner experience-grid">
+      <div class="experience-label reveal"><div class="kicker">My approach</div><h2>Good work is <em>in the details.</em></h2><p class="section-intro">A considered, people-first way of supporting a fast-moving professional environment. Select a step to read more.</p></div>
+      <div class="acc" id="acc">
+        <article class="acc-item reveal open" style="--d:0ms"><button class="acc-head" aria-expanded="true"><span class="step-number">1</span><h3>Prepare with purpose</h3><span class="plus" aria-hidden="true"></span></button><div class="acc-body"><div><p>Keep schedules, materials, and follow-up items organized so priorities are clear and meetings can run smoothly.</p></div></div></article>
+        <article class="acc-item reveal" style="--d:90ms"><button class="acc-head" aria-expanded="false"><span class="step-number">2</span><h3>Communicate with care</h3><span class="plus" aria-hidden="true"></span></button><div class="acc-body"><div><p>Be responsive, courteous, and clear while adapting communication to the needs of each situation.</p></div></div></article>
+        <article class="acc-item reveal" style="--d:180ms"><button class="acc-head" aria-expanded="false"><span class="step-number">3</span><h3>Protect trust</h3><span class="plus" aria-hidden="true"></span></button><div class="acc-body"><div><p>Handle information discreetly and follow applicable internal processes and confidentiality expectations.</p></div></div></article>
+        <article class="acc-item reveal" style="--d:270ms"><button class="acc-head" aria-expanded="false"><span class="step-number">4</span><h3>Follow through</h3><span class="plus" aria-hidden="true"></span></button><div class="acc-body"><div><p>Track details, confirm next steps, and help ensure that commitments and requests receive timely attention.</p></div></div></article>
+        <p class="note">The responsibilities and strengths shown here are a professional profile template. Please adjust them to match Patricia’s actual duties and experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-panel reveal">
+      <div class="kicker">Connect professionally</div>
+      <h2>Thoughtful service starts with a conversation.</h2>
+      <p class="contact-copy">For professional inquiries, introductions, or networking, feel free to connect using the contact details you choose to share.</p>
+      <div class="contact-actions"><a class="btn btn-primary" href="mailto:your.email@example.com">Email me</a><button class="btn btn-secondary" id="copyBtn" type="button">Copy email</button></div>
+    </div>
+  </section>
+</main>
+<footer><span>© <span id="year"></span> Patricia Mae Rodrin</span><span>Personal professional profile</span></footer>
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+document.getElementById('year').textContent=new Date().getFullYear();
+
+/* split headline into letters */
+let idx=0;
+$$('[data-split]').forEach(line=>{
+  const t=line.textContent;line.textContent='';
+  [...t].forEach(c=>{const s=document.createElement('span');s.className='ch';s.setAttribute('aria-hidden','true');s.style.setProperty('--i',idx++);s.textContent=c===' '?'\u00A0':c;line.appendChild(s);});
+});
+
+/* mobile menu */
+const mt=$('#menuToggle'), nl=$('#navLinks');
+const closeMenu=()=>{nl.classList.remove('open');mt.setAttribute('aria-expanded','false');mt.setAttribute('aria-label','Open navigation menu');mt.textContent='☰';};
+mt.addEventListener('click',()=>{const o=nl.classList.toggle('open');mt.setAttribute('aria-expanded',String(o));mt.setAttribute('aria-label',o?'Close navigation menu':'Open navigation menu');mt.textContent=o?'×':'☰';});
+nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+
+/* reveal on scroll */
+if('IntersectionObserver' in window&&!reduce){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:.12});
+  $$('.reveal').forEach(el=>io.observe(el));
+}else $$('.reveal').forEach(el=>el.classList.add('visible'));
+
+/* active nav link */
+if('IntersectionObserver' in window){
+  const links=[...$$('.nav-links a:not(.nav-contact)')];
+  const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));}}),{rootMargin:'-45% 0px -50% 0px'});
+  ['about','strengths','approach'].forEach(id=>so.observe(document.getElementById(id)));
+}
+
+/* scroll progress, hide nav on scroll down, back-to-top */
+const prog=$('#progress'), navWrap=$('#navWrap'), toTop=$('#toTop');
+let lastY=0,ticking=false;
+function onScroll(){
+  const y=scrollY, max=document.documentElement.scrollHeight-innerHeight;
+  prog.style.transform='scaleX('+(max>0?y/max:0)+')';
+  navWrap.classList.toggle('hide',y>lastY&&y>240&&!nl.classList.contains('open'));
+  toTop.classList.toggle('show',y>700);
+  lastY=y;ticking=false;
+}
+addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(onScroll);}},{passive:true});
+toTop.addEventListener('click',()=>scrollTo({top:0}));
+
+/* rotating professional focus words */
+const words=['Organized.','Discreet.','Dependable.','Attentive.'], rot=$('#rotator');
+if(!reduce){let w=0;setInterval(()=>{rot.classList.add('swap');setTimeout(()=>{w=(w+1)%words.length;rot.textContent=words[w];rot.classList.remove('swap');},450);},2600);}
+else rot.textContent='Organized. Discreet. Dependable.';
+
+/* accordion */
+$$('.acc-head').forEach(b=>b.addEventListener('click',()=>{
+  const item=b.parentElement, open=!item.classList.contains('open');
+  $$('.acc-item').forEach(i=>{i.classList.remove('open');i.querySelector('.acc-head').setAttribute('aria-expanded','false');});
+  if(open){item.classList.add('open');b.setAttribute('aria-expanded','true');}
+}));
+
+/* pointer effects (desktop only) */
+if(fine&&!reduce){
+  const glow=$('#glow'), hero=$('.hero'), tilt=$('#tilt'), orbs=$$('.orb');
+  addEventListener('pointermove',e=>{glow.classList.add('on');glow.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';},{passive:true});
+  document.addEventListener('mouseleave',()=>glow.classList.remove('on'));
+  hero.addEventListener('pointermove',e=>{
+    const r=hero.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+    tilt.style.transform='rotateY('+(x*10)+'deg) rotateX('+(-y*10)+'deg)';
+    orbs.forEach(o=>{const d=+o.dataset.depth;o.style.setProperty('--px',x*d+'px');o.style.setProperty('--py',y*d+'px');});
+  });
+  hero.addEventListener('pointerleave',()=>{tilt.style.transform='';});
+  $$('.value-card').forEach(c=>c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');}));
+  $$('.btn-primary,.nav-contact').forEach(b=>{
+    b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18)+'px,'+((e.clientY-r.top-r.height/2)*.25)+'px)';});
+    b.addEventListener('pointerleave',()=>{b.style.transform='';});
+  });
+}
+
+/* copy email + toast */
+const toast=$('#toast');let tt;
+function say(m){toast.textContent=m;toast.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>toast.classList.remove('show'),2400);}
+$('#copyBtn').addEventListener('click',async()=>{
+  const email='your.email@example.com';
+  try{await navigator.clipboard.writeText(email);say('Email address copied');}catch(e){say(email);}
+});
+</script>
+</body>
+</html>
